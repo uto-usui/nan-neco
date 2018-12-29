@@ -1,0 +1,32 @@
+version: "2"
+
+services:
+
+    wordpress:
+        image: wordpress:latest
+        #container_name: my_wp
+        ports:
+            - "80:80"
+        restart: always
+        depends_on:
+            - db
+        environment:
+            WORDPRESS_DB_HOST: "db:3306"
+        env_file: .env
+        # ホストマシンの任意のディレクトリをコンテナ内にマウント
+        volumes:
+            - ./themes:/var/www/html/wp-content/themes
+            - ./plugins:/var/www/html/wp-content/plugins
+
+    db:
+        image: mysql:5.7
+#        container_name: my_db
+        env_file: .env
+        restart: always
+        volumes:
+            - ./db-data/worker:/var/lib/mysql
+            #Defalt DB
+            - ./db-data/okiniirinoao_nanneco.sql:/docker-entrypoint-initdb.d/install_wordpress.sql
+
+volumes:
+    db-data:

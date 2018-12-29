@@ -1,0 +1,291 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-facebook-portal\n"
+"POT-Creation-Date: 2014-09-30 05:26:53+00:00\n"
+"PO-Revision-Date: 2014-10-01 18:19+0900\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: core/class-common.php:49
+msgid "Facebook"
+msgstr "Facebook"
+
+#: core/controller-admin.php:79
+msgid "Facebook Portal"
+msgstr "Facebook Portal"
+
+#: core/controller-admin.php:80
+msgid "FB Portal"
+msgstr "FB Portal"
+
+#: core/controller-admin.php:88 core/controller-admin.php:89
+#: core/controller-admin.php:136 core/controller-admin.php:332
+#: core/controller-admin.php:427 templates/setting.php:2
+msgid "Setting"
+msgstr "設定"
+
+#: core/controller-admin.php:136 core/controller-admin.php:332
+#: core/controller-admin.php:427
+msgid "Please first setting."
+msgstr "初期設定を行ってください。"
+
+#: core/controller-admin.php:159 core/controller-admin.php:240
+#: core/controller-admin.php:356 core/controller-admin.php:364
+#: core/controller-admin.php:438 core/controller-admin.php:442
+#: core/controller-admin.php:490 core/controller-admin.php:496
+msgid "Security check"
+msgstr "セキュリティチェック"
+
+#: core/controller-admin.php:177 core/controller-admin.php:270
+#: core/controller-admin.php:387
+msgid "%s is not entered."
+msgstr "%sが未入力です。"
+
+#: core/controller-admin.php:182 core/controller-admin.php:275
+#: core/controller-admin.php:392
+msgid "Please enter only the numbers %s"
+msgstr "%sは数字のみで入力してください。"
+
+#: core/controller-admin.php:188
+msgid "Please enter alphanumeric characters to %s"
+msgstr "%sは半角英数字で入力してください。"
+
+#: core/controller-admin.php:205
+msgid "An access token was not able to be acquired."
+msgstr "アクセストークンを取得できませんでした。"
+
+#: core/controller-admin.php:210
+msgid "The access token was acquired."
+msgstr "アクセストークンを取得しました。"
+
+#: core/controller-admin.php:224
+msgid "Acquired"
+msgstr "取得済み"
+
+#: core/controller-admin.php:224
+msgid "Not acquired"
+msgstr "未取得"
+
+#: core/controller-admin.php:281
+msgid "%s is already registered."
+msgstr "%sはすでに登録されています。"
+
+#: core/controller-admin.php:304
+msgid "Failed to add the user."
+msgstr "ユーザーを登録できませんでした。"
+
+#: core/controller-admin.php:315
+msgid "Failed to add the page information."
+msgstr "ページ情報を登録できませんでした。"
+
+#: core/controller-admin.php:319 core/controller-admin.php:410
+msgid "Saved successfully."
+msgstr "保存しました。"
+
+#: core/controller-admin.php:407
+msgid "Failed to save the information of the facebook page."
+msgstr "ページ情報を保存できませんでした。"
+
+#: core/controller-admin.php:450
+msgid "Your facebook page have not been deleted. Please investigate."
+msgstr "ページを削除できませんでした。"
+
+#: core/controller-admin.php:457
+msgid "Failed to delete user."
+msgstr "ユーザー削除中にエラーが発生しました。"
+
+#: core/controller-admin.php:460 core/controller-admin.php:470
+msgid "Data deleted."
+msgstr "削除しました。"
+
+#: core/controller-admin.php:465
+msgid "An error occurred during assignment of articles or to delete a user."
+msgstr "ユーザー削除もしくは関連する記事のアサイン中にエラーが発生しました。"
+
+#: core/controller-admin.php:467
+msgid "Assigned."
+msgstr "アサインしました。"
+
+#: core/controller-admin.php:557
+msgid "Saved the data of %d"
+msgstr "%d件の記事を保存しました。"
+
+#: core/controller-admin.php:561
+msgid "Failed to save the data."
+msgstr "記事の保存に失敗しました。"
+
+#: core/controller-admin.php:572
+msgid "Failed to get the data."
+msgstr "データの取得に失敗しました。"
+
+#: plugin.php:176
+msgid "Failed to delete the database table."
+msgstr "データベーステーブルの削除に失敗しました。"
+
+#: plugin.php:295
+msgid "Attention:"
+msgstr "警告:"
+
+#: templates/add.php:69
+msgid "Confirm"
+msgstr "確認"
+
+#: templates/add.php:151 templates/edit.php:96
+msgid "Save"
+msgstr "保存"
+
+#: templates/delete.php:39
+msgid "Confirm Deletion"
+msgstr "削除を実行"
+
+#: templates/index.php:2
+msgid "Add New"
+msgstr "新規追加"
+
+#: templates/setting.php:36
+msgid "Get the access token"
+msgstr "アクセストークン取得"
+
+#: templates/update.php:10 templates/update.php:47
+msgid "Save the data checked."
+msgstr "チェックした記事を保存"
+
+#: add template lang
+msgid "A page information was not able to be acquired."
+msgstr "ページ情報の取得に失敗しました。"
+
+msgid "The page information was acquired."
+msgstr "ページ情報を取得しました。"
+
+msgid "Add page"
+msgstr "ページの追加"
+
+msgid "Edit page"
+msgstr "ページの編集"
+
+msgid "Delete page"
+msgstr "ページの削除"
+
+msgid "Update page"
+msgstr "ページの更新"
+
+msgid "Page ID"
+msgstr "ページID"
+
+msgid "Please enter the Facebook page ID."
+msgstr "Facebook ページIDを入力してください。"
+
+msgid "Page information"
+msgstr "ページ情報"
+
+msgid "Please press the save button if there is no problem to contents."
+msgstr "内容を確認して問題がなければ保存ボタンを押してください。"
+
+msgid "Page name"
+msgstr "ページ名"
+
+msgid "Username"
+msgstr "ユーザー名"
+
+msgid "It is displayed only when have set."
+msgstr "設定されている場合のみ表示されます。"
+
+msgid "Page URL"
+msgstr "ページURL"
+
+msgid "Handling of the attached image"
+msgstr "添付画像の取り扱い"
+
+msgid "Size of the attached image"
+msgstr "添付画像のサイズ"
+
+msgid "Thumbnail"
+msgstr "サムネイル"
+
+msgid "Medium size"
+msgstr "中サイズ"
+
+msgid "Large size"
+msgstr "大サイズ"
+
+msgid "Full size"
+msgstr "フルサイズ"
+
+msgid "Please select an image size to inserted into the article."
+msgstr "記事に挿入する場合の画像サイズを選択してください。"
+
+msgid "Link to the Facebook post"
+msgstr "Facebookの記事へのリンク"
+
+msgid "Add a link to the article on Facebook post"
+msgstr "投稿記事に Facebook 記事へのリンクを追加する"
+
+msgid "Categories"
+msgstr "カテゴリー"
+
+msgid "Please enter the ID of the Facebook application."
+msgstr "Facebook アプリケーションのIDを入力してください。"
+
+msgid "Please enter the secret key of the Facebook application."
+msgstr "Facebook アプリケーションのシークレットキーを入力してください。"
+
+msgid ""
+"Please check the basic settings screen of the Facebook app to do the "
+"settings."
+msgstr "設定を行うにはFacebookアプリの基本設定画面を確認してください。"
+
+msgid "Content"
+msgstr "内容"
+
+msgid "Date"
+msgstr "日付"
+
+msgid "Post type"
+msgstr "投稿タイプ"
+
+msgid "You are about to delete following page."
+msgstr "次のページを削除しようとしています。"
+
+msgid "What should be done with content owned by this page?"
+msgstr "このページの投稿をどのように処理しますか？"
+
+msgid "Delete all posts."
+msgstr "すべての投稿を削除する。"
+
+msgid "Assign to the user of the next all posts"
+msgstr "すべての投稿を次のユーザーにアサイン"
+
+msgid "Leave as it is."
+msgstr "そのまま残す。"
+
+msgid "Edit &#8220;%s&#8221;"
+msgstr "&#8220;%s&#8221; を編集する"
+
+msgid "View &#8220;%s&#8221;"
+msgstr "&#8220;%s&#8221; を表示"
+
+msgid "Update &#8220;%s&#8221;"
+msgstr "&#8220;%s&#8221; を更新"
+
+msgid "Edit this item"
+msgstr "この項目を編集"
+
+msgid "Delete this item"
+msgstr "この項目を削除"
+
+msgid "Auto Link"
+msgstr "URL 自動リンク"
+
+msgid "Adds links (<a href=....)  by finding URL in the post."
+msgstr "本文に含まれるURLに自動でリンクを貼る"
+
+msgid "Is required blanks or line breaks after the URL."
+msgstr "URL の後ろに空白または改行が必要です。"

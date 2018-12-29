@@ -1,0 +1,287 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-facebook-portal\n"
+"POT-Creation-Date: 2014-09-30 05:26:53+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: core/class-common.php:49
+msgid "Facebook"
+msgstr ""
+
+#: core/controller-admin.php:79
+msgid "Facebook Portal"
+msgstr ""
+
+#: core/controller-admin.php:80
+msgid "FB Portal"
+msgstr ""
+
+#: core/controller-admin.php:88 core/controller-admin.php:89
+#: core/controller-admin.php:136 core/controller-admin.php:332
+#: core/controller-admin.php:427 templates/setting.php:2
+msgid "Setting"
+msgstr ""
+
+#: core/controller-admin.php:136 core/controller-admin.php:332
+#: core/controller-admin.php:427
+msgid "Please first setting."
+msgstr ""
+
+#: core/controller-admin.php:159 core/controller-admin.php:240
+#: core/controller-admin.php:356 core/controller-admin.php:364
+#: core/controller-admin.php:438 core/controller-admin.php:442
+#: core/controller-admin.php:490 core/controller-admin.php:496
+msgid "Security check"
+msgstr ""
+
+#: core/controller-admin.php:177 core/controller-admin.php:270
+#: core/controller-admin.php:387
+msgid "%s is not entered."
+msgstr ""
+
+#: core/controller-admin.php:182 core/controller-admin.php:275
+#: core/controller-admin.php:392
+msgid "Please enter only the numbers %s"
+msgstr ""
+
+#: core/controller-admin.php:188
+msgid "Please enter alphanumeric characters to %s"
+msgstr ""
+
+#: core/controller-admin.php:205
+msgid "An access token was not able to be acquired."
+msgstr ""
+
+#: core/controller-admin.php:210
+msgid "The access token was acquired."
+msgstr ""
+
+#: core/controller-admin.php:224
+msgid "Acquired"
+msgstr ""
+
+#: core/controller-admin.php:224
+msgid "Not acquired"
+msgstr ""
+
+#: core/controller-admin.php:281
+msgid "%s is already registered."
+msgstr ""
+
+#: core/controller-admin.php:304
+msgid "Failed to add the user."
+msgstr ""
+
+#: core/controller-admin.php:315
+msgid "Failed to add the page information."
+msgstr ""
+
+#: core/controller-admin.php:319 core/controller-admin.php:410
+msgid "Saved successfully."
+msgstr ""
+
+#: core/controller-admin.php:407
+msgid "Failed to save the information of the facebook page."
+msgstr ""
+
+#: core/controller-admin.php:450
+msgid "Your facebook page have not been deleted. Please investigate."
+msgstr ""
+
+#: core/controller-admin.php:457
+msgid "Failed to delete user."
+msgstr ""
+
+#: core/controller-admin.php:460 core/controller-admin.php:470
+msgid "Data deleted."
+msgstr ""
+
+#: core/controller-admin.php:465
+msgid "An error occurred during assignment of articles or to delete a user."
+msgstr ""
+
+#: core/controller-admin.php:467
+msgid "Assigned."
+msgstr ""
+
+#: core/controller-admin.php:557
+msgid "Saved the data of %d"
+msgstr ""
+
+#: core/controller-admin.php:561
+msgid "Failed to save the data."
+msgstr ""
+
+#: core/controller-admin.php:572
+msgid "Failed to get the data."
+msgstr ""
+
+#: plugin.php:176
+msgid "Failed to delete the database table."
+msgstr ""
+
+#: plugin.php:295
+msgid "Attention:"
+msgstr ""
+
+#: templates/add.php:69
+msgid "Confirm"
+msgstr ""
+
+#: templates/add.php:151 templates/edit.php:96
+msgid "Save"
+msgstr ""
+
+#: templates/delete.php:39
+msgid "Confirm Deletion"
+msgstr ""
+
+#: templates/index.php:2
+msgid "Add New"
+msgstr ""
+
+#: templates/setting.php:36
+msgid "Get the access token"
+msgstr ""
+
+#: templates/update.php:10 templates/update.php:47
+msgid "Save the data checked."
+msgstr ""
+
+#: add template lang
+msgid "A page information was not able to be acquired."
+msgstr ""
+
+msgid "The page information was acquired."
+msgstr ""
+
+msgid "Add page"
+msgstr ""
+
+msgid "Edit page"
+msgstr ""
+
+msgid "Delete page"
+msgstr ""
+
+msgid "Update page"
+msgstr ""
+
+msgid "Page ID"
+msgstr ""
+
+msgid "Please enter the Facebook page ID."
+msgstr ""
+
+msgid "Page information"
+msgstr ""
+
+msgid "Please press the save button if there is no problem to contents."
+msgstr ""
+
+msgid "Page name"
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "It is displayed only when have set."
+msgstr ""
+
+msgid "Page URL"
+msgstr ""
+
+msgid "Handling of the attached image"
+msgstr ""
+
+msgid "Size of the attached image"
+msgstr ""
+
+msgid "Thumbnail"
+msgstr ""
+
+msgid "Medium size"
+msgstr ""
+
+msgid "Large size"
+msgstr ""
+
+msgid "Full size"
+msgstr ""
+
+msgid "Please select an image size to inserted into the article."
+msgstr ""
+
+msgid "Link to the Facebook post"
+msgstr ""
+
+msgid "Add a link to the article on Facebook post"
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "Please enter the ID of the Facebook application."
+msgstr ""
+
+msgid "Please enter the secret key of the Facebook application."
+msgstr ""
+
+msgid "Please check the basic settings screen of the Facebook app to do the settings."
+msgstr ""
+
+msgid "Content"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Post type"
+msgstr ""
+
+msgid "You are about to delete following page."
+msgstr ""
+
+msgid "What should be done with content owned by this page?"
+msgstr ""
+
+msgid "Delete all posts."
+msgstr ""
+
+msgid "Assign to the user of the next all posts"
+msgstr ""
+
+msgid "Leave as it is."
+msgstr ""
+
+msgid "Edit &#8220;%s&#8221;"
+msgstr ""
+
+msgid "View &#8220;%s&#8221;"
+msgstr ""
+
+msgid "Update &#8220;%s&#8221;"
+msgstr ""
+
+msgid "Edit this item"
+msgstr ""
+
+msgid "Delete this item"
+msgstr ""
+
+msgid "Auto Link"
+msgstr ""
+
+msgid "Adds links (<a href=....)  by finding URL in the post."
+msgstr ""
+
+msgid "Is required blanks or line breaks after the URL."
+msgstr ""
