@@ -1,0 +1,107 @@
+// =========================================================
+//
+// tab
+//
+// =========================================================
+//
+//
+.c-tab_nav {
+  margin-bottom: 1rem;
+  //
+  @media (min-width: $pad-size) {
+    margin-bottom: 3rem;
+  }
+}
+
+.c-tab_nav-item {
+  width: 50%;
+  //
+  @media (max-width: $sp-max-size) {
+    margin-bottom: 1rem;
+  }
+  //
+  @media (min-width: $pad-size) {
+    width: auto;
+  }
+}
+
+.c-tab_nav-target {
+  display: inline-block;
+  padding: 1rem;
+  @include fontsize(16);
+  border-radius: $radius-md;
+  //
+  &:hover {
+    background-color: rgba($primary-color, .2);
+  }
+
+  &.is-active {
+    color: $white;
+    background-color: $primary-color;
+  }
+}
+
+.c-tab_panel {
+
+}
+
+.c-tab_panel-inner {
+  display: none;
+  //
+  &.is-open {
+    display: block;
+  }
+}
+
+.c-tab_list {
+}
+
+.c-tab_item {
+  position: relative;
+  padding: 2rem;
+  border-radius: $radius-md;
+  background-color: rgba($primary-color, .1);
+  //
+  @media (min-width: $pc-size) {
+    padding: 3rem 6rem;
+  }
+  //
+  + .c-tab_item {
+    margin-top: 3rem;
+  }
+}
+
+.c-tab_time {
+  display: block;
+  @include fontsize(20);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: $primary-bg-color;
+  letter-spacing: .3em;
+  transition: .35s $easeInSine;
+  text-shadow: 1px 0  rgba($text-color, 1), 0 -1px  rgba($text-color, 1), -1px 0  rgba($text-color, 1), 0 1px  rgba($text-color, 1);
+}
+
+.c-tab_title {
+  margin-bottom: 0;
+}
+
+.c-tab_textarea {
+  margin-top: 1.5rem;
+  text-align: justify;
+  //
+  @media (min-width: $pc-size) {
+    margin-top: 2.5rem;
+  }
+  //
+  &.js-dropdown-item {
+    display: none;
+  }
+}
+
+.c-tab_figure {
+  //
+  @media (max-width: $sp-max-size) {
+    margin-bottom: 1rem;
+  }
+}

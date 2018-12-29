@@ -1,0 +1,79 @@
+// - - - - - - - - - - - - - - - - - - - -
+//
+// card
+//
+// - - - - - - - - - - - - - - - - - - - -
+//
+//
+.c-card {
+  padding: 1.5rem 1.5rem;
+  border-radius: 5px;
+  background-color: $light-gray;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  //
+  @media (min-width: $pad-size) {
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    box-shadow: 0 0 8px rgba($black, .1);
+  }
+  //
+  + .c-card {
+    margin-top: 1rem;
+    //
+    @media (min-width: $pad-size) {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.c-card_figure {
+  height: 0;
+  padding-top: calc(2 / 3 * 100%);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  //
+  @media (max-width: $sp-max-size) {
+    margin-bottom: 1rem;
+  }
+  //
+  @media (min-width: $pad-size) {
+    width: 40%;
+    padding-top: calc(3 / 2 * 20%);
+  }
+}
+
+.c-card_textarea {
+  text-align: justify;
+  //
+  @media (min-width: $pad-size) {
+    width: 60%;
+    padding: 2rem;
+    background-color: rgba($white, .9);
+    box-shadow: 0 0 30px rgba($black, .1);
+  }
+}
+
+.c-card_text {
+  line-height: 1.55;
+  //
+  @media (min-width: $pad-size) {
+    line-height: 1.9;
+    @include fontsize(16);
+  }
+  //
+  + .c-card_text {
+    margin-top: 1rem;
+  }
+}
+
+
+.c-card_title {
+  margin-bottom: 1rem;
+  @include fontsize(16);
+  font-weight: bold;
+  line-height: 1.4;
+}

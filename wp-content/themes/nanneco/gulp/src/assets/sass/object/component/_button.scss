@@ -1,0 +1,215 @@
+// =========================================================
+//
+// button
+//
+// =========================================================
+//
+//
+.c-btn {
+  position: relative;
+  z-index: 1;
+  appearance: none;
+  display: inline-block;
+  border: 0;
+  border-radius: 10px;
+  background: transparent none;
+  cursor: pointer;
+  transition: .25s $easeInSine;
+  //
+  > .fa {
+    margin-left: .5rem;
+  }
+  //
+  &.c-btn--submit {
+    height: 50px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    @include fontsize(16);
+    font-weight: bold;
+    letter-spacing: .1em;
+    color: $white;
+    box-shadow: 0 5px 0 darken($primary-color, 10%);
+    background-color: $primary-color;
+    //
+    @media (min-width: $pad-size) {
+      height: 70px;
+      @include fontsize(20);
+    }
+    //
+    &:hover {
+      box-shadow: 0 0 0 darken($primary-color, 10%);
+      transform: translateY(5px);
+    }
+  }
+  //
+  &.c-btn--primary {
+    z-index: 1;
+    overflow: hidden;
+    height: 50px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    @include fontsize(16);
+    font-weight: bold;
+    letter-spacing: .1em;
+    color: $white;
+    border-radius: $radius-md;
+    background-color: $primary-color;
+    //
+    @media (min-width: $pad-size) {
+      height: 60px;
+      @include fontsize(18);
+    }
+    //
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform .35s $easeOutSine;
+      pointer-events: none;
+    }
+    //
+    &::after {
+      z-index: -2;
+      background-color: $secondary-color;
+      transition-delay: .3s;
+      transform-origin: right center;
+    }
+    //
+    &::before {
+      z-index: -1;
+      background-color: $thirdry-color;
+      transition-delay: 0;
+    }
+    //
+    &:hover {
+      background-color: darken($primary-color, 5%);
+      //
+      &::after {
+        transform: scaleX(1);
+        transition-delay: 0;
+        transform-origin: left center;
+      }
+      //
+      &::before {
+        transform: scaleX(.5);
+        transition-delay: .6s;
+        transform-origin: left center;
+      }
+    }
+  }
+  //
+  &.c-btn--close {
+    position: fixed;
+    display: none;
+    z-index: 999;
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    color: $gray;
+    border-radius: 100%;
+    transition: .45s $easeOutSine;
+    //
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      top: calc(50% - 1px);
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: currentcolor;
+    }
+    //
+    &::after {
+      transform: rotate(45deg);
+    }
+    //
+    &::before {
+      transform: rotate(-45deg);
+    }
+    //
+    @media (min-width: $pad-size) {
+      right: 2rem;
+      top: 2rem;
+      width: 5rem;
+      height: 5rem;
+      padding: 1rem;
+    }
+    //
+    &:hover {
+      color: $primary-color;
+      transform: rotate(90deg);
+    }
+  }
+  //
+  &.c-btn--toggle {
+    position: absolute;
+    bottom: calc(100% - 1.5rem);
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    border: 1px solid rgba($black, .2);
+    background-color: $white;
+    transition: .8s $easeOutSine;
+    //
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 3px / 2);
+      left: .5rem;
+      right: .5rem;
+      height: 3px;
+      border-radius: 5px;
+      background-color: $primary-color;
+      transition: .8s $easeOutQuad;
+    }
+    //
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(50% - 3px / 2);
+      left: .5rem;
+      right: .5rem;
+      height: 3px;
+      border-radius: 5px;
+      background-color: $primary-color;
+      transform: rotate(90deg);
+    }
+    //
+    @media (min-width: $pc-size) {
+    }
+    // open style
+    //
+    &.is-active {
+      bottom: -1.5rem;
+      transform: rotate(90deg);
+      //
+      &::after {
+        transform: rotate(90deg);
+      }
+      //
+      @media (min-width: $pc-size) {
+        bottom: 1.5rem;
+      }
+    }
+  }
+  //
+  &.is-disable {
+    pointer-events: none;
+    opacity: .15;
+  }
+  //
+  &.c-btn--full {
+    width: 100%;
+  }
+}

@@ -1,0 +1,36 @@
+// - - - - - - - - - - - - - - - - - - - -
+//
+// memo list
+//
+// - - - - - - - - - - - - - - - - - - - -
+//
+//
+.c-memo-list {}
+
+.c-memo-list_item {
+  margin-bottom: 1.5rem;
+}
+
+.c-memo-list_item-inner {
+  padding: 1.5rem;
+  border-left: 5px solid $primary-color;
+  background-color: rgba($primary-color, .1);
+
+  //
+  @media (min-width: $pc-size) {
+    padding: 2rem;
+  }
+}
+
+.c-memo-list_title {
+  line-height: 1.35;
+  margin-bottom: .5rem;
+  @include fontsize(18);
+}
+
+.c-memo-list_lead {
+  line-height: 1.65;
+  font-style: italic;
+  color: rgba($black, .6);
+  @include fontsize(12)
+}

@@ -1,0 +1,134 @@
+// =========================================================
+//
+// display set
+//
+// =========================================================
+//
+.u-inline-block {
+  display: inline-block !important;
+}
+
+.u-block {
+  display: block !important;
+}
+
+.u-hidden {
+  display: none !important;
+}
+
+.u-invisible {
+  visibility: hidden !important;
+}
+
+.u-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+// ---------------------------------------------------------
+// responsive (mobile first)
+// ---------------------------------------------------------
+//
+// ----- visible ----- //
+.u-sp-visible {
+  display: block;
+  //
+  @media (min-width: $pad-size) {
+    display: none;
+  }
+}
+
+.u-pad-visible {
+  display: none;
+  //
+  @media (min-width: $pad-size) {
+    display: block;
+  }
+}
+
+.u-pc-visible {
+  display: none;
+  //
+  @media (min-width: $pc-size) {
+    display: block;
+  }
+}
+
+.u-large-visible {
+  display: none;
+  //
+  @media (min-width: $large-size) {
+    display: block;
+  }
+}
+
+// ----- hidden ----- //
+.u-sp-hidden {
+  display: none;
+  //
+  @media (min-width: $pad-size) {
+    display: block;
+  }
+}
+
+.u-pad-hidden {
+  display: block;
+  //
+  @media (min-width: $pad-size) {
+    display: none;
+  }
+}
+
+.u-pc-hidden {
+  display: block;
+  //
+  @media (min-width: $pc-size) {
+    display: none;
+  }
+}
+
+.u-large-hidden {
+  display: block;
+  //
+  @media (min-width: $large-size) {
+    display: none;
+  }
+}
+
+
+// ---------------------------------------------------------
+// print
+// ---------------------------------------------------------
+//
+.visible-print-block {
+  display: none !important;
+  @media print {
+    display: block !important;
+  }
+}
+
+.visible-print-inline {
+  display: none !important;
+  @media print {
+    display: inline !important;
+  }
+}
+
+.visible-print-inline-block {
+  display: none !important;
+  @media print {
+    display: inline-block !important;
+  }
+}
+
+.hidden-print {
+  @media print {
+    display: none !important;
+  }
+}

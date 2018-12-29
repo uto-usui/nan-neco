@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <style>
+      .a {
+        fill: #00a99d;
+      }
+    </style>
+  </defs>
+  <title>mask</title>
+  <path class="a" d="M0,0V450H800V0ZM685.09,413.49H114.91a50,50,0,0,1-50-50v-277a50,50,0,0,1,50-50H685.09a50,50,0,0,1,50,50v277A50,50,0,0,1,685.09,413.49Z"/>
+</svg>

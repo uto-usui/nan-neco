@@ -1,0 +1,224 @@
+// =========================================================
+//
+// footer
+//
+// =========================================================
+//
+//
+.l-footer_copy {
+  position: fixed;
+  z-index: 99;
+  right: 1.5rem;
+  top: 50%;
+  letter-spacing: .2em;
+  @include fontsize(9);
+  transform-origin: center right;
+  transform: rotate(90deg) translateX(50%);
+  //
+  @media (min-width: $pad-size) {
+    right: 3rem;
+    @include fontsize(12);
+  }
+}
+
+.l-footer_scroll {
+  position: fixed;
+  //
+  @media (max-width: $sp-max-size) {
+    display: none;  //TODO
+  }
+  z-index: 99;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  letter-spacing: .2em;
+  //
+  @media (min-width: $pad-size) {
+    left: 3rem;
+    bottom: 2.5rem;
+  }
+  //
+  &::after {
+    content: '';
+    position: absolute;
+    top: -1.8rem;
+    left: 50%;
+    width: .8rem;
+    height: .8rem;
+    border-left: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: translate(-50%) rotate(-45deg);
+  }
+}
+
+// ---------------------------------------------------------
+// contact
+// ---------------------------------------------------------
+//
+.l-footer_contact {
+  position: fixed;
+  z-index: 998;
+  height: 100vh;
+  overflow: auto;
+  padding: 2rem 1.5rem 5rem;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba($primary-bg-color, .95);
+  opacity: 0;
+}
+
+.l-footer_contact-inner {
+  position: relative;
+  z-index: 999;
+  max-width: 650px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.l-footer_contact-list {
+  text-align: left;
+  //
+  + .l-footer_contact-list {
+    margin-top: 2rem;
+    //
+    @media (min-width: $pad-size) {
+      margin-top: 3.5rem;
+    }
+  }
+}
+
+.l-footer_contact-name {
+  position: relative;
+  margin-bottom: .5rem;
+  padding-left: 1.5rem;
+  font-weight: bold;
+  @include fontsize(16);
+  //
+  @media (min-width: $pad-size) {
+    margin-bottom: 1rem;
+    @include fontsize(20);
+  }
+  //
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid $primary-color;
+    border-radius: 100%;
+    //
+    @media (min-width: $pad-size) {
+      top: 2px;
+    }
+  }
+  //
+  > small {
+    display: block;
+    padding-top: .25rem;
+    @include fontsize(10);
+    color: $gray;
+    font-weight: 300;
+    //
+    @media (min-width: $pad-size) {
+      @include fontsize(12);
+      padding-top: .5rem;
+    }
+  }
+}
+
+.l-footer_contact-value {
+  //
+   label {
+    width: 100%;
+    margin-bottom: .5rem;
+    //
+    @media (min-width: $pad-size) {
+      width: 48%;
+    }
+  }
+}
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//

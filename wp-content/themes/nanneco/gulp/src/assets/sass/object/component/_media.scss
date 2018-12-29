@@ -1,0 +1,277 @@
+// =========================================================
+//
+// media
+//
+// =========================================================
+//
+//
+.c-media {
+
+}
+
+.c-media_figure {
+  position: relative;
+  z-index: 1;
+  height: 200px;
+  width: 100%;
+  border-radius: $radius-md;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  //
+  @media (max-width: $pad-max-size) {
+    margin-bottom: 1rem;
+  }
+  //
+  @media (min-width: $pad-size) {
+    width: 200px;
+    margin-right: 2rem;
+  }
+  //
+  @media (min-width: $pc-size) {
+    width: 50%;
+    height: 0;
+    padding-top: calc(9 / 16 * 60%);
+    margin-right: 4rem;
+  }
+  //
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: $radius-md;
+    transition: .35s $easeInSine;
+    border: 0 solid rgba($primary-color, 1);
+    //
+    .c-media_target:hover & {
+      border-width: 10px;
+      transition: .35s $easeOutSine;
+    }
+  }
+  //
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: $radius-md;
+    background-image: $primary-gradient;
+    opacity: .1;
+    transition: .35s $easeInSine;
+    //
+    .c-media_target:hover & {
+      opacity: .5;
+      transition: .35s $easeOutSine;
+    }
+  }
+}
+
+.c-media_target {
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: .35s $easeInSine;
+  //
+  @media (min-width: $pad-size) {
+    flex-direction: row;
+    align-items: flex-end;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: $radius-xs;
+    border-bottom: .5rem solid $light-gray;
+  }
+  //
+  @media (min-width: $pc-size) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  //
+  &:hover {
+    border-color: rgba($primary-color,1);
+  }
+}
+
+.c-media_time {
+  @media (min-width: $pc-size) {
+    position: absolute;
+    z-index: 9;
+    top: 2rem;
+    right: 0;
+    display: block;
+    text-align: right;
+    @include fontsize(42);
+    line-height: 1.5;
+    color: $primary-bg-color;
+    letter-spacing: .3em;
+    transition: .35s $easeInSine;
+    text-shadow: 1px 0  rgba($text-color, 1), 0 -1px  rgba($text-color, 1), -1px 0  rgba($text-color, 1), 0 1px  rgba($text-color, 1);
+    //
+    .c-media_target:hover & {
+      text-shadow: 1px 0  rgba($primary-color, 1), 0 -1px  rgba($primary-color, 1), -1px 0  rgba($primary-color, 1), 0 1px  rgba($primary-color, 1);
+    }
+  }
+
+}
+
+.c-media_text {
+  @media (min-width: $pc-size) {
+    @include fontsize(18);
+  }
+}
+
+.c-media_textarea {
+  //
+  @media (min-width: $pc-size) {
+    position: relative;
+    padding: 2.5rem;
+    //
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5rem;
+      height: 5rem;
+      border-top: .5rem solid $light-gray;
+      border-left: .5rem solid $light-gray;
+      border-radius: $radius-xs;
+      pointer-events: none;
+      transition: .35s $easeInSine;
+    }
+    //
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 5rem;
+      height: 5rem;
+      border-bottom: .5rem solid $light-gray;
+      border-right: .5rem solid $light-gray;
+      border-radius: $radius-xs;
+      pointer-events: none;
+      transition: .35s $easeInSine;
+    }
+    //
+    .c-media_target:hover & {
+      //
+      &::before,
+      &::after {
+        border-color: $primary-color;
+      }
+    }
+  }
+}
+
+.c-media_title {
+  display: inline-block;
+  color: $primary-color;
+  @include fontsize(16);
+  border-radius: $radius-sm;
+  transition: .35s $easeInSine;
+  //
+  @media (min-width: $pad-size) {
+    @include fontsize(18);
+  }
+  //
+  .c-media_target:hover & {
+    color: $white;
+    background-color: $primary-color;
+  }
+}
+
+.c-media_time {
+  display: block;
+  font-weight: 600;
+}
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//

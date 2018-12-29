@@ -1,0 +1,130 @@
+.hero {
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// list
+
+.hero__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__item {
+  width: 50%;
+}
+
+.hero__item-inner {
+  position: relative;
+  height: 0;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  //
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.hero__center {
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+// title
+
+.hero__title-area {
+  @media (min-width: $pad-size) {
+    position: relative;
+  }
+}
+
+.hero__title {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: $font-josefin;
+  color: $gray;
+  letter-spacing: .02em;
+  //
+  @media (min-width: $pad-size) {
+    font-size: 36px;
+    letter-spacing: .05em;
+  }
+}
+
+.hero__lead {
+  margin-top: 6px;
+  font-size: 10px;
+  color: $primary-color;
+  //
+  @media (min-width: $pad-size) {
+    margin-top: 12px;
+    font-size: 12px;
+  }
+}
+
+.hero__lead-item {
+}
+
+// button
+
+.hero__buttons {
+  display: flex;
+  justify-content: center;
+  //
+  @media (max-width: $sp-max-size) {
+    margin-top: 30px;
+  }
+  //
+  @media (min-width: $pad-size) {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-left: 50px;
+    transform: translateY(-50%);
+  }
+}
+
+.hero__button-item {
+  + .hero__button-item {
+    margin-left: 50px;
+  }
+}
+
+.hero__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  font-weight: 800;
+  border-radius: 100%;
+  font-family: $font-nunito;
+  font-size: 12px;
+  //
+  @media (min-width: $pad-size) {
+    font-size: 14px;
+    letter-spacing: .1em;
+  }
+  //
+  &.hero__button--news {
+    color: $white;
+    background-color: $primary-color;
+  }
+  //
+  &.hero__button--pickup {
+    color: $gray;
+    background-color: $light-gray;
+  }
+  //
+  &:hover {
+  }
+}

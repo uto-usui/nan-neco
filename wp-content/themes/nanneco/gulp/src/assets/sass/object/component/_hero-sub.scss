@@ -1,0 +1,65 @@
+// - - - - - - - - - - - - - - - - - - - -
+//
+// hero sub
+//
+// - - - - - - - - - - - - - - - - - - - -
+
+.c-hero-sub {
+  margin-bottom: 4rem;
+  //
+  @media (min-width: $pc-size) {
+    margin-bottom: 8rem;
+  }
+}
+
+.c-hero-sub_inner {
+  position: relative;
+  z-index: 1;
+  height: 80vh;
+  overflow: hidden;
+  //
+  @media (min-width: $pad-size) {
+    height: 100vh;
+  }
+}
+
+.c-hero-sub_figure {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  //
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($black, .65);
+  }
+}
+
+.c-hero-sub_caption {
+  position: relative;
+  z-index: 5;
+
+  letter-spacing: .1em;
+  line-height: 2.5;
+  font-weight: 600;
+  color: rgba($white, .8);
+  border-radius: $radius-sm;
+  //
+  @media (min-width: $pad-size) {
+    padding: 4rem 10rem;
+    @include fontsize(16);
+    line-height: 3;
+    border: 3px solid rgba($white, .5);
+  }
+}

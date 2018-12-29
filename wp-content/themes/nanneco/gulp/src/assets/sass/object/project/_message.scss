@@ -1,0 +1,106 @@
+// =========================================================
+//
+// message
+//
+// =========================================================
+//
+//
+.p-message {}
+
+.p-message_inner {
+  position: relative;
+}
+
+.p-message_text {
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  padding: 1rem;
+  text-align: left;
+  line-height: 1.35;
+  color: $primary-color;
+  font-size: 4vw;
+  letter-spacing: .03em;
+  background-color: rgba($primary-bg-color, .65);
+  //
+  @media (min-width: $pad-size) {
+    left: calc(50% + (#{$hero-sp-size} / 2 / 2) - 1rem);
+    padding: 2rem;
+    top: -7rem;
+    font-size: 3vw;
+  }
+  //
+  @media (min-width: $pc-size) {
+    top: -10rem;
+  }
+  //
+  @media (min-width: $large-size) {
+    top: -16rem;
+  }
+  //
+  > span {
+    display: inline-block;
+  }
+}
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//

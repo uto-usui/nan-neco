@@ -1,0 +1,15 @@
+
+{
+  "order": [
+    "/library/jquery-2.1.4.js",
+    "/library/TweenMax.js",
+    "/plugin/ScrollToPlugin.min.js",
+    "/plugin/jquery.easing.js",
+    "/plugin/hammer.min.js",
+    "/plugin/jquery.ba-throttle-debounce.min.js",
+    "/plugin/owl.carousel.js",
+    "/plugin/css_browser_selector.js",
+    "/plugin/snap.svg-min.js",
+    "/babel/main.js"
+  ]
+}

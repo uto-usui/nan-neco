@@ -1,0 +1,68 @@
+
+//btn action
+@keyframes hvr-push {
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes imagelightbox-loading {
+  from {
+    opacity: .5;
+    transform: scale( .75);
+  }
+  50% {
+    opacity: 1;
+    transform: scale( 1);
+  }
+  to {
+    opacity: .5;
+    transform: scale( .75);
+  }
+}
+
+
+@include waitAnimate(
+  (
+    animationName: rubber,
+    keyframes: (
+      0: (
+        transform: scale3d(1, 1, 1)
+      ),
+      30: (
+        transform: scale3d(1.25, .75, 1)
+      ),
+      40: (
+        transform: scale3d(0.75, 1.25, 1)
+      ),
+      50: (
+        transform: scale3d(1.15, .85, 1)
+      ),
+      65: (
+        transform: scale3d(.95, 1.05, 1)
+      ),
+      75: (
+        transform: scale3d(1.05, .95, 1)
+      ),
+      100: (
+        transform: scale3d(1, 1, 1)
+      )
+    ),
+    duration: 2,
+    waitTime: 1,
+    timingFunction: ease,
+    iterationCount: infinite
+  )
+);

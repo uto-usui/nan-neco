@@ -1,0 +1,166 @@
+// =========================================================
+//
+// hero
+//
+// =========================================================
+//
+//
+$hero-sp-size: 70vw;
+$hero-pad-size: 65vw;
+$hero-pc-size: 60vw;
+$hero-count: 7;  // set slider image count
+
+
+.p-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  //
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: $primary-bg-color;
+  }
+}
+
+.p-hero_inner {
+  width: calc(#{$hero-sp-size} * 3);
+  margin-left: -5px; // border
+  transform: translateX(-55vw); // calc((70vw * 3 - 100vw) / 2 * -1)
+  //
+  @media (min-width: $pc-size) {
+    width: calc(#{$hero-pc-size} * 3);
+    margin-left: -10px; // border
+    transform: translateX(-40vw); // calc((60vw * 3 - 100vw) / 2 * -1)
+  }
+}
+
+.p-hero_item {
+  position: relative;
+  z-index: 1;
+  width: calc(#{$hero-sp-size} + 1.5rem);
+  transform: translateX(-.75rem);
+  //
+  @media (min-width: $pc-size) {
+    width: calc(#{$hero-pc-size} + 1.5rem);
+  }
+}
+
+.p-hero_list-wrap {
+  width: $hero-sp-size;
+  overflow: hidden;
+  backface-visibility: hidden;
+  @media (min-width: $pc-size) {
+    width: $hero-pc-size;
+  }
+}
+
+.p-hero_list {
+  // slide number
+  width: calc(#{$hero-sp-size} * #{$hero-count});
+  //
+  @media (min-width: $pc-size) {
+    width: calc(#{$hero-pc-size} * #{$hero-count});
+  }
+}
+
+.p-hero_img-wrap {
+  width: $hero-sp-size;
+  backface-visibility: hidden;
+  //
+  @media (min-width: $pc-size) {
+    width: $hero-pc-size;
+  }
+}
+
+.p-hero_img {
+  width: $hero-sp-size;
+  padding-top: calc(300 / 535 * 100%);
+  height: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  //
+  @media (min-width: $pc-size) {
+    width: $hero-pc-size;
+  }
+}
+
+.p-hero_mask {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: calc(1.5rem / 2 * -1);
+  width: calc(100% + 1.5rem);
+  //
+  .a {
+    fill: $primary-bg-color;
+  }
+}
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//

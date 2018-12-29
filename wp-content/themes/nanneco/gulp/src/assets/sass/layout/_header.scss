@@ -1,0 +1,305 @@
+// =========================================================
+//
+// header
+//
+// =========================================================
+//
+//
+.l-header {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  //
+  @media (min-width: $pad-size) {
+    display: flex;
+    padding-top: 15px;
+    padding-left: calc(10px + 1rem);
+    padding-right: calc(10px + 1rem);
+  }
+  //
+  @media (min-width: $pc-size) {
+    padding-left: calc(10px + 2rem);
+    padding-right: calc(10px + 2rem);
+  }
+}
+
+.l-header_inner {
+  //
+  @media (max-width: $sp-max-size) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.l-header_title {
+  width: 200px;
+  //
+  @media (min-width: $pad-size) {
+    width: 240px;
+  }
+  //
+  @media (min-width: $pc-size) {
+    width: 300px;
+  }
+  //
+  svg {
+    vertical-align: bottom;
+  }
+  //
+  .a {
+    fill: $gray;
+  }
+  .b {
+    fill: $primary-color;
+  }
+  .c {
+    fill: none;
+    stroke: $primary-color;
+    stroke-miterlimit: 10;
+    stroke-width: 5px;
+  }
+}
+
+.l-header_trigger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  //
+  @media (min-width: $pad-size) {
+    display: none;
+  }
+  //
+  > span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: $primary-color;
+  }
+  //
+  transition: transform .45s $easeInOutCubic;
+  //
+  &.is-open {
+    transform: rotate(90deg);
+  }
+}
+
+.l-heaver_nav {
+  //
+  @media (max-width: $sp-max-size) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(-100%);
+    pointer-events: none;
+    transition: transform .45s $easeInOutCubic;
+    //
+    &.is-open {
+      transform: translateX(0);
+      pointer-events: auto;
+    }
+  }
+}
+
+.l-heaver_nav-overlay {
+  width: calc(100vw - 155px);
+  height: 100vh;
+  background-color: rgba($black, .2);
+  opacity: 0;
+  transition: opacity .45s $easeInOutCubic;
+  //
+  .l-heaver_nav.is-open & {
+    opacity: 1;
+  }
+  //
+  @media (min-width: $pad-size) {
+    display: none;
+  }
+}
+
+.l-heaver_nav-list {
+  @media (max-width: $sp-max-size) {
+    padding-top: 20px;
+    width: 155px;
+    height: 100vh;
+    background-color: $primary-color;
+  }
+  //
+  @media (min-width: $pad-size) {
+    display: flex;
+  }
+}
+
+.l-heaver_nav-item {
+  //
+  @media (min-width: $pad-size) {
+  }
+  + .l-heaver_nav-item {
+  }
+}
+
+.l-heaver_nav-target {
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  height: 60px;
+  color: $white;
+  letter-spacing: .05em;
+  @include fontsize(16);
+  font-family: $font-josefin;
+
+  //
+  @media (min-width: $pad-size) {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 70px;
+    color: $gray;
+    @include fontsize(14);
+    //
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 5px / 2);
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      background-color: currentColor;
+      transform: scale(0);
+      pointer-events: none;
+    }
+    //
+    transition: color .3s $easeOutCubic;
+    //
+    &::after {
+      transition: transform .45s $easeInOutSine;
+    }
+    //
+    &:hover {
+      color: $primary-color;
+      //
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
+  //
+  @media (min-width: $pc-size) {
+    padding-left: 20px;
+    padding-right: 20px;
+    @include fontsize(16);
+  }
+}
+
+.l-header_map-link {
+  position: fixed;
+  z-index: 99;
+  bottom: 1rem;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  //
+  @media (min-width: $pad-size) {
+    right: 2rem;
+    bottom: 2rem;
+    left: auto;
+    width: auto;
+    transform: translateX(0);
+  }
+  //
+  > .c-btn {
+    //
+    @media (max-width: $sp-max-size) {
+      font-size: 14px !important;
+    }
+    > .fa {
+      @include fontsize(18);
+    }
+  }
+}
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//

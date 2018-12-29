@@ -1,0 +1,25 @@
+// - - - - - - - - - - - - - - - - - - - -
+//
+// pager
+//
+// - - - - - - - - - - - - - - - - - - - -
+
+.c-pager {}
+
+.c-pager_list {}
+
+.c-pager_item {
+  width: calc(100% / 3);
+  //
+  &.c-pager_item--next {}
+
+  &.c-pager_item--prev {}
+}
+
+
+.c-pager_target {
+  padding-top: 50%;
+  padding-bottom: 50%;
+  height: 0 !important;
+  border-radius: 100% !important;
+}
