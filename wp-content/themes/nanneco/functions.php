@@ -21,9 +21,9 @@ add_action( 'after_setup_theme', 'setup' );
  *
 **/
 function my_scripts() {
-  wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/assets/css/main.min.css', array(), '20170629' );
+  wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/assets/css/main.min.css', array(), '20181231' );
 
-  wp_enqueue_script( 'mainscript', get_template_directory_uri() . '/assets/js/index.min.js', array(), '20170624', true );
+  wp_enqueue_script( 'mainscript', get_template_directory_uri() . '/assets/js/index.min.js', array(), '20181231', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts' );

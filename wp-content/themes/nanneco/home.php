@@ -2,19 +2,34 @@
 
 <main class="l-main" id="main">
 
-  <article class="c-article">
 
-    <div class="hero">
+  <div class="hero" id="hero">
+    <div class="hero__inner">
 
       <ul class="hero__list">
         <li class="hero__item">
           <div class="hero__item-inner">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero/item1.jpg" alt="">
+            <img class="hero__img js-sp" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero/item2.jpg" alt="">
           </div>
         </li>
         <li class="hero__item">
           <div class="hero__item-inner">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero/item1.jpg" alt="">
+            <img class="hero__img js-sp hero__img--sm" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero/item5.jpg" alt="">
+          </div>
+        </li>
+        <li class="hero__item">
+          <div class="hero__item-inner">
+            <img class="hero__img hero__img--sm" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero/item4.jpg" alt="">
+          </div>
+        </li>
+        <li class="hero__item">
+          <div class="hero__item-inner">
+            <img class="hero__img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero/item21.jpg" alt="">
+          </div>
+        </li>
+        <li class="hero__item">
+          <div class="hero__item-inner">
+            <img class="hero__img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero/item12.jpg" alt="">
           </div>
         </li>
       </ul>
@@ -40,30 +55,42 @@
       <ul class="hero__list">
         <li class="hero__item">
           <div class="hero__item-inner">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero/item1.jpg" alt="">
+            <img class="hero__img js-sp hero__img--sm" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero/item3.jpg" alt="">
           </div>
         </li>
         <li class="hero__item">
           <div class="hero__item-inner">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero/item1.jpg" alt="">
+            <img class="hero__img js-sp" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero/item1.jpg" alt="">
+          </div>
+        </li>
+        <li class="hero__item">
+          <div class="hero__item-inner">
+            <img class="hero__img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero/item18.jpg" alt="">
+          </div>
+        </li>
+        <li class="hero__item">
+          <div class="hero__item-inner">
+            <img class="hero__img hero__img--sm" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero/item7.jpg" alt="">
+          </div>
+        </li>
+        <li class="hero__item">
+          <div class="hero__item-inner">
+            <img class="hero__img hero__img--sm" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero/item13.jpg" alt="">
           </div>
         </li>
       </ul>
 
     </div>
+  </div>
 
-  </article>
 
-  <article class="c-article">
+  <article class="" id="pickup">
 
-    <h2 class="c-h1 u-mb--md">
-      <div class="c-section_inner">Pick up Contents<i>ナン猫の注目コンテンツ＊︎</i></div>
-    </h2>
-
+    <h2 class="c-h2"><span class="c-h2_inner">Pick up Contents <br>ナン猫の注目コンテンツ＊︎</span></h2>
 
     <div class="c-section_inner">
 
-      <div class="p-home_card-section">
+      <div class="p-home__card-section">
 
         <!--
                  <div class="c-card">
@@ -174,69 +201,76 @@
   <!--          </div>-->
 
 
-	<?php
-	$args = array(
-		'post_type'      => array( 'post' ),
-		'posts_per_page' => '8'
-	);
+  <?php
+  $args = array(
+    'post_type'      => array( 'post' ),
+    'posts_per_page' => '8'
+  );
 
-	$my_query = new WP_Query( $args );
+  $my_query = new WP_Query( $args );
 
-	if ( $my_query->have_posts() ) {
+  if ( $my_query->have_posts() ) {
 
-		?>
-      <div class="c-section_inner">
-        <p class="c-h2 u-mb--lg"><span class="c-h2_inner">nan-neco news</span></p>
+    ?>
+  <div class="p-home__news" id="news">
+    <article class="c-section_inner">
+      <h2 class="c-h2 u-mb--lg"><span class="c-h2_inner">nan-neco news</span></h2>
 
-        <ul class="c-tab_list">
+      <ul class="c-tab_list">
 
-			<?php
-			while ( $my_query->have_posts() ) {
-				$my_query->the_post(); ?>
+        <?php
+        while ( $my_query->have_posts() ) {
+          $my_query->the_post(); ?>
 
-              <li class="c-tab_item">
-                <time class="c-tab_time"
-                      datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo get_post_time( 'Y.m.d (D)' ); ?></time>
-                <h3 class="c-tab_title c-h3">
-                  <div class="c-h3_inner"><?php the_title(); ?></div>
-                </h3>
-                <button class="c-btn c-btn--toggle js-dropdown-trigger"></button>
-                <div class="c-tab_textarea js-dropdown-item">
-					<?php
-					$img = get_the_post_thumbnail_url();
-					if ( $img ) {
-					?>
-                  <div class="f-container f-middle">
-                    <div class="f-item-md-4 f-item-sm-3 f-item-xs-12">
-                      <figure class="c-tab_figure">
-                        <img src="<?php echo esc_attr( $img ); ?>" alt="">
-                      </figure>
-                    </div>
-                    <div class="f-item-md-8 f-item-sm-9 f-item-xs-12">
-                      <div class="c-article_text">
+          <li class="c-tab_item">
+            <time class="c-tab_time"
+                  datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo get_post_time( 'Y.m.d (D)' ); ?></time>
+            <h3 class="c-tab_title c-h3">
+              <div class="c-h3_inner"><?php the_title(); ?></div>
+            </h3>
+            <button class="c-btn c-btn--toggle js-dropdown-trigger"></button>
+            <div class="c-tab_textarea js-dropdown-item">
+              <?php
+              $img = get_the_post_thumbnail_url();
+              if ( $img ) {
+              ?>
+              <div class="f-container f-middle">
+                <div class="f-item-md-4 f-item-sm-3 f-item-xs-12">
+                  <figure class="c-tab_figure">
+                    <img src="<?php echo esc_attr( $img ); ?>" alt="">
+                  </figure>
+                </div>
+                <div class="f-item-md-8 f-item-sm-9 f-item-xs-12">
+
+                  <div class="c-article_text">
+                      <div class="c-article_bg">
                           <?php the_content(); ?>
-                      </div>
-                    </div>
-					  <?php } else { ?>
-                        <div class="c-article_text">
-                            <?php the_content(); ?>
-                        </div>
-					  <?php } ?>
+                       </div>
                   </div>
-              </li>
-				<?php
-			}
-			?>
-        </ul>
+                </div>
+                <?php } else { ?>
+                  <div class="c-article_text">
+                    <div class="c-article_bg">
+                          <?php the_content(); ?>
+                       </div>
+                  </div>
+                <?php } ?>
+              </div>
+          </li>
+          <?php
+        }
+        ?>
+      </ul>
 
-        <p class="u-mt--lg">
-          <a class="c-btn c-btn--primary f-middle f-in-flex" href="https://www.facebook.com/otonohapro/" target="_blank">ナン猫
-            facebook ページ</a>
-        </p>
+<!--      <p class="u-mt--lg">-->
+<!--        <a class="c-btn c-btn--primary f-middle f-in-flex" href="https://www.facebook.com/otonohapro/" target="_blank">ナン猫-->
+<!--          facebook ページ</a>-->
+<!--      </p>-->
 
 
-      </div>
-	<?php } ?>
+    </article>
+  </div>
+  <?php } ?>
   </article>
 
 </main>

@@ -25,6 +25,17 @@
   }
 }
 
+.c-article_bg {
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  //
+  @media (min-width: $pc-size) {
+    padding: 20px 30px;
+    border-radius: 10px;
+  }
+}
+
 .c-article_gray {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -33,6 +44,7 @@
   @media (min-width: $pc-size) {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    border-radius: 10px;
   }
 }
 

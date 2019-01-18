@@ -13,56 +13,59 @@ var googleMapValue = googleMapValue || {};
   // common
   ///////////////////
   var DATA = {
-
-    $win: $(window),
-    $body: $('body'),
-
+    domain: '',
     spW: 320,
     tabW: 768,
-    breakPointPC: 980,
+    pcW: 980,
+    wideScreenW: 1024,
+    fullHdW: 1440,
     scrollTop: 0,
     scrollLeft: 0,
 
     init: function init() {
 
-      var self = this;
-      self.$win = $(window);
-      self.$body = $('body');
-      self.winW = self.$win.width();
-      self.winH = self.$win.height();
-      self.bodyH = self.$body.height();
-      self.isMini = self.$win.width() <= self.spW;
-      self.isTab = self.spW <= self.$win.width() && self.$win.width() <= self.tabW;
-      self.isPC = self.tabW <= self.$win.width() && self.$win.width() <= self.breakPointPC;
+      var self = this;self.domain = window.location.protocol + '//' + window.location.host || '', self.winW = window.innerWidth;
+      self.winH = window.innerHeight;
+
+      self.isMini = self.winW < self.spW;
+      self.isSp = self.spW <= self.winW && self.winW <= self.tabW;
+      self.isTab = self.tabW <= self.winW && self.winW <= self.pcW;
+      self.isPc = self.winW >= self.pcW && self.winW <= self.wideScreenW;
+      self.isWidescreen = self.winW >= self.wideScreenW && self.winW <= self.fullHdW;
+      self.isFullHd = self.winW >= self.fullHdW;
+
+      self.isDesktop = self.winW >= self.tabW;
+      self.isMobile = self.winW <= self.tabW;
 
       var resize = function resize() {
 
-        self.winW = self.$win.width();
-        self.winH = self.$win.height();
-        self.isMini = self.$win.width() <= self.spW;
-        self.isTab = self.spW <= self.$win.width() && self.$win.width() <= self.tabW;
-        self.isPC = self.tabW <= self.$win.width() && self.$win.width() <= self.breakPointPC;
+        self.winW = window.innerWidth;
+        self.winH = window.innerHeight;
+
+        self.isMini = self.winW <= self.spW;
+        self.isSp = self.spW <= self.winW && self.winW <= self.tabW;
+        self.isTab = self.tabW <= self.winW && self.winW <= self.pcW;
+        self.isPc = self.winW >= self.pcW && self.winW <= self.wideScreenW;
+        self.isWidescreen = self.winW >= self.wideScreenW && self.winW <= self.fullHdW;
+        self.isFullHd = self.winW >= self.fullHdW;
+
+        self.isDesktop = self.winW >= self.tabW;
+        self.isMobile = self.winW <= self.tabW;
       };
       resize();
-      self.$win.on('resize', function () {
 
-        resize();
-      });
+      window.addEventListener('resize', resize);
 
       var scroll = function scroll() {
 
-        self.scrollTop = self.$win.scrollTop();
-        self.scrollLeft = self.$win.scrollLeft();
+        self.scrollTop = window.pageYOffset;
       };
-      scroll();
-      self.$win.on('scroll', function () {
 
-        scroll();
-      });
+      window.addEventListener('scroll', scroll);
     },
+
     transitionEnd: 'oTransitionEnd mozTransitionEnd webkitTransitionEnd transitionend',
     animationEnd: 'webkitAnimationEnd oanimationend msAnimationEnd animationend'
-
   };
   DATA.init();
 
@@ -101,7 +104,7 @@ var googleMapValue = googleMapValue || {};
 
       var timer = false;
 
-      DATA.$win.on('resize', function () {
+      $(window).on('resize', function () {
 
         if (timer !== false) {
 
@@ -596,7 +599,7 @@ var googleMapValue = googleMapValue || {};
           mask = new RectAnimation(this, direction);
         }
 
-        DATA.$win.on('scroll', function () {
+        $(window).on('scroll', function () {
 
           if (DATA.scrollTop + DATA.winH > offset + 210) {
 
@@ -1090,12 +1093,174 @@ var googleMapValue = googleMapValue || {};
       });
     };
 
+    /**
+     *
+     * @param target {String} 対象の要素
+     */
+
+    var heroImages = function () {
+      function heroImages(target) {
+        _classCallCheck(this, heroImages);
+
+        this.$hero = $(target);
+        this.addClassName = 'hero__img--sm';
+        this.currentNumber = 0;
+        this.totalNum = 86;
+
+        this.init();
+      }
+
+      _createClass(heroImages, [{
+        key: 'init',
+        value: function init() {
+          var _this = this;
+
+          this.getAllElement();
+          this.loadEvent();
+
+          setInterval(function () {
+
+            _this.selectElement();
+          }, 2000);
+        }
+
+        /**
+         * デバイスによって取得する要素を変更する
+         */
+
+      }, {
+        key: 'getAllElement',
+        value: function getAllElement() {
+
+          if (DATA.isSp) {
+
+            this.$images = this.$hero.find('.js-sp');
+          } else {
+
+            this.$images = this.$hero.find('img');
+          }
+        }
+      }, {
+        key: 'selectElement',
+        value: function selectElement() {
+
+          var $el = this.$images.eq(this.getNum(this.$images.length));
+
+          this.outAnim($el);
+        }
+      }, {
+        key: 'outAnim',
+        value: function outAnim($el) {
+          var _this2 = this;
+
+          TweenMax.to($el.parent(), .35, {
+            scale: 0,
+            ease: Back.easeIn.config(1.3),
+            onComplete: function onComplete() {
+
+              _this2.setSrc($el);
+            }
+          });
+        }
+      }, {
+        key: 'inAnim',
+        value: function inAnim($target) {
+
+          TweenMax.to($($target).parent(), .5, {
+            scale: 1,
+            ease: Power2.easeOut
+
+          });
+        }
+
+        /**
+         * 画像の src を変更する
+         * @param target {Element}
+         */
+
+      }, {
+        key: 'setSrc',
+        value: function setSrc(target) {
+
+          var src = target.attr('src');
+          var number = 0;
+          do {
+
+            number = this.getNum(this.totalNum + 1);
+          } while (this.currentNumber === number && number === 0);
+
+          this.currentNumber = number;
+          var path = src.replace(/item\d*/g, 'item' + this.currentNumber);
+
+          target.attr('src', path);
+        }
+
+        /**
+         * 画像を load した時のイベント
+         */
+
+      }, {
+        key: 'loadEvent',
+        value: function loadEvent() {
+          var _this3 = this;
+
+          this.$images.on('load', function (e) {
+
+            _this3.checkSize(e.currentTarget);
+            _this3.inAnim(e.currentTarget);
+          });
+        }
+
+        /**
+         * 画像のサイズをチェックして class を付与する
+         * @param target
+         */
+
+      }, {
+        key: 'checkSize',
+        value: function checkSize(target) {
+
+          var $el = $(target);
+          var height = $el.height();
+          var width = $el.width();
+
+          if (width < height) {
+
+            $el.addClass(this.addClassName);
+          } else {
+
+            $el.removeClass(this.addClassName);
+          }
+        }
+
+        /**
+         * ランダムな数字を返す
+         * @param max {number}
+         * @returns {number}
+         */
+
+      }, {
+        key: 'getNum',
+        value: function getNum(max) {
+
+          return Math.trunc(Math.random() * max);
+        }
+
+        // 87
+
+      }]);
+
+      return heroImages;
+    }();
+
     /////////////////////////////////
     //
     // load event
     //
     /////////////////////////////////
-    DATA.$win.on('load', function () {
+
+
+    $(window).on('load', function () {
 
       if ($('#js-map').length) {
 
@@ -1107,6 +1272,7 @@ var googleMapValue = googleMapValue || {};
       //
       carouselInit();
       actionSpHeader($('.js-navi-trigger'), $('.js-navi'));
+      new heroImages('#hero');
       setTimeout(loaded, 1000);
       console.log('ok');
     });

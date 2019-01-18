@@ -7,62 +7,68 @@ const googleMapValue = googleMapValue || {};
   // common
   ///////////////////
   const DATA = {
-
-    $win: $(window),
-    $body: $('body'),
-
+    domain: '',
     spW: 320,
     tabW: 768,
-    breakPointPC: 980,
+    pcW: 980,
+    wideScreenW: 1024,
+    fullHdW: 1440,
     scrollTop: 0,
     scrollLeft: 0,
 
-    init: function() {
+    init() {
 
-      let self = this;
-      self.$win = $(window);
-      self.$body = $('body');
-      self.winW = self.$win.width();
-      self.winH = self.$win.height();
-      self.bodyH = self.$body.height();
-      self.isMini = self.$win.width() <= self.spW;
-      self.isTab = self.spW <= self.$win.width() && self.$win.width() <= self.tabW;
-      self.isPC = self.tabW <= self.$win.width() && self.$win.width() <= self.breakPointPC;
+      const self = this
+      ;(self.domain =
+        `${window.location.protocol}//${window.location.host}` || ''),
+        (self.winW = window.innerWidth)
+      self.winH = window.innerHeight
 
-      let resize = () => {
+      self.isMini = self.winW < self.spW
+      self.isSp = self.spW <= self.winW && self.winW <= self.tabW
+      self.isTab = self.tabW <= self.winW && self.winW <= self.pcW
+      self.isPc = self.winW >= self.pcW && self.winW <= self.wideScreenW
+      self.isWidescreen =
+        self.winW >= self.wideScreenW && self.winW <= self.fullHdW
+      self.isFullHd = self.winW >= self.fullHdW
 
-        self.winW = self.$win.width();
-        self.winH = self.$win.height();
-        self.isMini = self.$win.width() <= self.spW;
-        self.isTab = self.spW <= self.$win.width() && self.$win.width() <= self.tabW;
-        self.isPC = self.tabW <= self.$win.width() && self.$win.width() <= self.breakPointPC;
+      self.isDesktop = self.winW >= self.tabW
+      self.isMobile = self.winW <= self.tabW
+
+      const resize = () => {
+
+        self.winW = window.innerWidth
+        self.winH = window.innerHeight
+
+        self.isMini = self.winW <= self.spW
+        self.isSp = self.spW <= self.winW && self.winW <= self.tabW
+        self.isTab = self.tabW <= self.winW && self.winW <= self.pcW
+        self.isPc = self.winW >= self.pcW && self.winW <= self.wideScreenW
+        self.isWidescreen =
+          self.winW >= self.wideScreenW && self.winW <= self.fullHdW
+        self.isFullHd = self.winW >= self.fullHdW
+
+        self.isDesktop = self.winW >= self.tabW
+        self.isMobile = self.winW <= self.tabW
 
       }
-      resize();
-      self.$win.on('resize', () => {
+      resize()
 
-        resize();
+      window.addEventListener('resize', resize)
 
-      });
+      const scroll = () => {
 
-      let scroll = () => {
-
-        self.scrollTop = self.$win.scrollTop();
-        self.scrollLeft = self.$win.scrollLeft();
+        self.scrollTop = window.pageYOffset
 
       }
-      scroll();
-      self.$win.on('scroll', () => {
 
-        scroll();
-
-      });
+      window.addEventListener('scroll', scroll)
 
     },
-    transitionEnd: 'oTransitionEnd mozTransitionEnd webkitTransitionEnd transitionend',
-    animationEnd: 'webkitAnimationEnd oanimationend msAnimationEnd animationend'
-
-  };
+    transitionEnd:
+      'oTransitionEnd mozTransitionEnd webkitTransitionEnd transitionend',
+    animationEnd: 'webkitAnimationEnd oanimationend msAnimationEnd animationend',
+  }
   DATA.init();
 
   const util = {
@@ -105,7 +111,7 @@ const googleMapValue = googleMapValue || {};
 
       let timer = false;
 
-      DATA.$win.on('resize', function() {
+      $(window).on('resize', function() {
 
         if (timer !== false) {
 
@@ -649,7 +655,7 @@ const googleMapValue = googleMapValue || {};
 
         }
 
-        DATA.$win.on('scroll', function() {
+        $(window).on('scroll', function() {
 
           if (DATA.scrollTop + DATA.winH > offset + 210) {
 
@@ -1249,13 +1255,165 @@ const googleMapValue = googleMapValue || {};
 
     };
 
+    /**
+     *
+     * @param target {String} 対象の要素
+     */
+    class heroImages {
+
+      constructor(target) {
+
+        this.$hero = $(target);
+        this.addClassName = 'hero__img--sm';
+        this.currentNumber = 0;
+        this.totalNum = 86;
+
+        this.init();
+
+      }
+
+      init() {
+
+        this.getAllElement();
+        this.loadEvent();
+
+        setInterval(() => {
+
+          this.selectElement()
+
+        }, 2000)
+
+      }
+
+      /**
+       * デバイスによって取得する要素を変更する
+       */
+      getAllElement() {
+
+        if (DATA.isSp) {
+
+          this.$images = this.$hero.find('.js-sp');
+
+        } else {
+
+          this.$images = this.$hero.find('img');
+
+        }
+
+      }
+
+      selectElement() {
+
+        const $el = this.$images.eq(this.getNum(this.$images.length));
+
+        this.outAnim($el)
+
+      }
+
+      outAnim($el) {
+
+        TweenMax.to($el.parent(), .35, {
+          scale: 0,
+          ease: Back.easeIn.config(1.3),
+          onComplete: () => {
+
+            this.setSrc($el);
+
+          }
+        })
+
+      }
+
+      inAnim($target) {
+
+        TweenMax.to($($target).parent(), .5, {
+          scale: 1,
+          ease: Power2.easeOut
+          ,
+        })
+
+      }
+
+      /**
+       * 画像の src を変更する
+       * @param target {Element}
+       */
+      setSrc(target) {
+
+        const src = target.attr('src');
+        let number = 0
+        do {
+
+          number = this.getNum(this.totalNum + 1);
+
+        } while (this.currentNumber === number && number === 0)
+
+        this.currentNumber = number
+        const path = src
+          .replace(/item\d*/g, `item${this.currentNumber}`);
+
+        target.attr('src', path);
+
+      }
+
+      /**
+       * 画像を load した時のイベント
+       */
+      loadEvent() {
+
+        this.$images.on('load', (e) => {
+
+          this.checkSize(e.currentTarget);
+          this.inAnim(e.currentTarget);
+
+        })
+
+      }
+
+      /**
+       * 画像のサイズをチェックして class を付与する
+       * @param target
+       */
+      checkSize(target) {
+
+        const $el = $(target);
+        const height = $el.height();
+        const width = $el.width();
+
+        if (width < height) {
+
+          $el.addClass(this.addClassName);
+
+        } else {
+
+          $el.removeClass(this.addClassName);
+
+        }
+
+      }
+
+      /**
+       * ランダムな数字を返す
+       * @param max {number}
+       * @returns {number}
+       */
+      getNum(max) {
+
+        return Math.trunc(Math.random() * max)
+
+      }
+
+      // 87
+
+    }
+
 
     /////////////////////////////////
     //
     // load event
     //
     /////////////////////////////////
-    DATA.$win.on('load', () => {
+    $(window).on('load', () => {
 
       if ($('#js-map').length) {
 
@@ -1269,6 +1427,7 @@ const googleMapValue = googleMapValue || {};
       //
       carouselInit();
       actionSpHeader($('.js-navi-trigger'), $('.js-navi'));
+      new heroImages('#hero');
       setTimeout(loaded, 1000);
       console.log('ok');
 

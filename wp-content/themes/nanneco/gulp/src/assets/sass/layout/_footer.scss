@@ -141,6 +141,53 @@
   }
 }
 
+// social
+
+.l-footer_social {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 15px;
+  pointer-events: none;
+  //
+  @media (min-width: $pad-size) {
+    padding: 30px 35px;
+  }
+}
+
+.l-footer_social-item {
+  + .l-footer_social-item {
+    margin-left: 15px;
+    //
+    @media (min-width: $pad-size) {
+      margin-left: 20px;
+    }
+  }
+}
+
+.l-footer_social-target {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  pointer-events: auto;
+  //
+  svg {
+  }
+  path {
+    fill: $gray;
+  }
+  //
+  transition: opacity .3s $easeOutSine;
+  //
+  &:hover{
+    opacity: .5;
+  }
+}
+
 
 //
 //

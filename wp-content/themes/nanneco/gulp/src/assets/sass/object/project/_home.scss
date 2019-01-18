@@ -4,9 +4,24 @@
 //
 // =========================================================
 //
-.p-home_card-section {
+.p-home__card-section {
+  margin-bottom: 45px;
+  //
   @media (min-width: $pad-size) {
-    margin-top: 7rem;
+    margin-bottom: 60px;
+  }
+  //
+  @media (min-width: $pad-size) {
+    margin-bottom: 120px;
+  }
+
+}
+
+.p-home__news {
+  padding-bottom: 45px;
+  //
+  @media (min-width: $pad-size) {
+    margin-bottom: 60px;
   }
 }
 //
