@@ -153,7 +153,76 @@
                       </div>
                   </div>
 
+    <div class="c-card">
+      <figure class="c-card_figure" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/event/tozantoyoga_201812.jpg)"></figure>
+        <div class="c-card">
+          <div class="c-card_textarea">
+            <h3 class="c-card_title">もみじの森の登山とヨガに出かけませんか。</h3>
+            <p class="c-card_text">
+              ◎秋の紅葉を楽しみたい方<br>
+              ◎野外のヨガを楽しみたい方<br>
+              ◎運動不足を解消したい方
+            </p>
+            <p class="c-card_text">
+              詳細は<a href="https://otonohapro.exblog.jp/30140689/" target="_blank">ブログ</a>をお読みください!
+            </p>
+          </div>
+        </div>
+
 -->
+
+        <div class="c-card">
+          <figure class="c-card_figure" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/event/summer1.jpg)"></figure>
+          <div class="c-card_textarea">
+            <h3 class="c-card_title">ナン猫夏休み企画第1弾 【絵本作家のぶみさんとあそぼう！】@イオンモール京都桂川</h3>
+            <p class="c-card_text">
+              「ママがおばけになっちゃった！」NHK Eテレで放送中の「うちのウッチョパス」「しんかんくんシリーズ」など、これまで200作以上の絵本を生み出された大人気作家のぶみさんが今年も京都で、読み聞かせや体を使ったワークショップ、絵本作家さんならではの似顔絵サイン会&写真撮影を開催します！
+            </p>
+            <p class="c-card_text">
+              チケットのご購入やグッズの販売は<a href="https://camp-fire.jp/projects/view/130367" target="_blank">クラウドファンディングのサイト</a>よりお願いいたします！
+            </p>
+          </div>
+        </div>
+
+        <div class="c-card">
+          <figure class="c-card_figure" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/event/summer1.jpg)"></figure>
+          <div class="c-card_textarea">
+            <h3 class="c-card_title">ナン猫夏休み企画第2弾 武田双雲講演会『自分を表現するとは〜書道を教えない書道教室〜』@イオンモール京都桂川</h3>
+            <p class="c-card_text">
+              書道を通して双雲氏の見てこられた日本の文化や言葉の力を通して自由に自分を表現することの楽しみや、素晴らしさをお話いただき、自信を身につける事へのきっかけや、生きづらさを感じる人が、自分でいる事を表現出来る勇気や機会がどんどん広がるきっかけとなりますように。
+            </p>
+            <p class="c-card_text">
+              チケット販売は <a href="https://passmarket.yahoo.co.jp/event/show/detail/01e9fx1032f44.html" target="_blank">パスマーケットのサイト</a>よりお願いいたします。
+            </p>
+          </div>
+        </div>
+
+        <div class="c-card">
+          <figure class="c-card_figure" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/event/noguchiseitai_20190119_2.jpg)"></figure>
+          <div class="c-card_textarea">
+            <h3 class="c-card_title">ナントカと猫企画 x ️山上亮の野口整体お手当部【魔女修行の第一歩】@吹田モモの家</h3>
+            <p class="c-card_text">
+              みんな誰もが当たり前に持っている'感覚で生きる能力'を思い出す事が出来るような、みんなが魔法を使える手を、からだを取り戻せるきっかけになりますように！
+              毎回違った内容で学ぶ連続講座ですが、単発の受講もOKです。
+            </p>
+            <p class="c-card_text">
+              詳細は<a href="https://otonohapro.exblog.jp/30301653/" target="_blank">ブログ</a>をお読みください！<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="c-card">
+          <figure class="c-card_figure" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/event/noguchiseitai_20190119_1.jpg)"></figure>
+          <div class="c-card_textarea">
+            <h3 class="c-card_title">ナントカと猫企画 x 山上亮の野口整体季節のからだのお手当部 @交野市きさいち邸産巣日</h3>
+            <p class="c-card_text">
+              昨年、吹田モモの家で、家庭やご自身の施術にも生かしやすいと大好評だった季節のお手当編が大阪交野市での講座に再登場！
+            </p>
+            <p class="c-card_text">
+              詳細は<a href="https://otonohapro.exblog.jp/30301670/" target="_blank">ブログ</a>をお読みください！<br>
+            </p>
+          </div>
+        </div>
 
         <div class="c-card">
           <figure class="c-card_figure" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/event/noguchiseitai_201901.jpg)"></figure>
@@ -165,21 +234,6 @@
             <p class="c-card_text">
               詳細は<a href="https://otonohapro.exblog.jp/30044465/" target="_blank">ブログ</a>をお読みください！<br>
               <a href="https://www.kokuchpro.com/event/5bea935c0cee03864bbd49e6a52e9837/" target="_blank">《オンラインチケット購入》</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="c-card">
-          <figure class="c-card_figure" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/event/tozantoyoga_201812.jpg)"></figure>
-          <div class="c-card_textarea">
-            <h3 class="c-card_title">もみじの森の登山とヨガに出かけませんか。</h3>
-            <p class="c-card_text">
-              ◎秋の紅葉を楽しみたい方<br>
-              ◎野外のヨガを楽しみたい方<br>
-              ◎運動不足を解消したい方
-            </p>
-            <p class="c-card_text">
-              詳細は<a href="https://otonohapro.exblog.jp/30140689/" target="_blank">ブログ</a>をお読みください!
             </p>
           </div>
         </div>
