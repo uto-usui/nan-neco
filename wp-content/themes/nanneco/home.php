@@ -185,7 +185,7 @@
         </div>
 
         <div class="c-card">
-          <figure class="c-card_figure" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/event/summer1.jpg)"></figure>
+          <figure class="c-card_figure" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/event/summer2.jpg)"></figure>
           <div class="c-card_textarea">
             <h3 class="c-card_title">ナン猫夏休み企画第2弾 武田双雲講演会『自分を表現するとは〜書道を教えない書道教室〜』@イオンモール京都桂川</h3>
             <p class="c-card_text">
