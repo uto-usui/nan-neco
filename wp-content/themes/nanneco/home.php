@@ -224,7 +224,7 @@
           </div>
         </div>
 
-        <div class="c-card">
+        <!--<div class="c-card">
           <figure class="c-card_figure" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/event/noguchiseitai_201901.jpg)"></figure>
           <div class="c-card_textarea">
             <h3 class="c-card_title">野口整体集中講座〜基本編〜 全２回 開催決定！</h3>
@@ -236,7 +236,7 @@
               <a href="https://www.kokuchpro.com/event/5bea935c0cee03864bbd49e6a52e9837/" target="_blank">《オンラインチケット購入》</a>
             </p>
           </div>
-        </div>
+        </div>-->
 
       </div>
 
