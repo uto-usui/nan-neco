@@ -172,14 +172,14 @@
 -->
 
         <div class="c-card">
-          <figure class="c-card_figure" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/event/summer1.jpg)"></figure>
+          <figure class="c-card_figure" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/event/summer1.jpg?=2)"></figure>
           <div class="c-card_textarea">
             <h3 class="c-card_title">ナン猫夏休み企画第1弾 【絵本作家のぶみさんとあそぼう！】@イオンモール京都桂川</h3>
             <p class="c-card_text">
               「ママがおばけになっちゃった！」NHK Eテレで放送中の「うちのウッチョパス」「しんかんくんシリーズ」など、これまで200作以上の絵本を生み出された大人気作家のぶみさんが今年も京都で、読み聞かせや体を使ったワークショップ、絵本作家さんならではの似顔絵サイン会&写真撮影を開催します！
             </p>
             <p class="c-card_text">
-              チケットのご購入やグッズの販売は<a href="https://camp-fire.jp/projects/view/130367" target="_blank">クラウドファンディングのサイト</a>よりお願いいたします！
+              チケットのご購入は<a href="https://passmarket.yahoo.co.jp/event/show/detail/01bx6r108yai6.html" target="_blank">パスマーケットのサイト</a>よりお願いいたします。
             </p>
           </div>
         </div>
